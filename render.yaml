@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: luxe-rose-backend
+    runtime: node
+    plan: starter # 無料枠でも動きますが、念のため
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: STRIPE_SECRET_KEY
+        sync: false # RenderのDashboard > Env Vars で手動設定してください
+      - key: NODE_VERSION
+        value: 18.16.0
+      - key: BACKEND_URL
+        fromService:
+          name: luxe-rose-backend
+          type: host
