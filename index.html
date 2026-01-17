@@ -76,39 +76,18 @@
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Playfair Display', serif;
       }
-      /* Custom scrollbar for webkit */
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #121212; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333; 
-        border-radius: 3px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #D4AF37; 
-      }
-      
-      .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
-      .animate-slide-in-right { animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-      .animate-slide-in-left { animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-
-      .perspective-1000 {
-        perspective: 1000px;
-      }
-
-      /* Stripe Element Base Styles */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #121212; }
+      ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+      .perspective-1000 { perspective: 1000px; }
       .StripeElement {
         background-color: #121212;
         padding: 12px 16px;
         border-radius: 12px;
         border: 1px solid rgba(255,255,255,0.1);
       }
-      .StripeElement--focus {
-        border-color: #D4AF37;
-      }
+      .StripeElement--focus { border-color: #D4AF37; }
     </style>
   <script type="importmap">
 {
@@ -118,14 +97,15 @@
     "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
-    <!-- 以下の行を追加しました。これが無いとアプリが起動しません -->
-    <script type="module" src="index.tsx"></script>
+    <!-- index.tsxからbundle.jsに変更 -->
+    <script type="module" src="bundle.js"></script>
   </body>
 </html>
