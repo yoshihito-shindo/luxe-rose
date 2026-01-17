@@ -2,7 +2,7 @@ services:
   - type: web
     name: luxe-rose-backend
     runtime: node
-    plan: starter
+    plan: free
     buildCommand: npm install
     startCommand: node server.js
     envVars:
